@@ -1,11 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse,JsonResponse
 
-def home(request):
-    return HttpResponse('<h1>Home page<h1/>')
+def index(request):
+    return render(request, 'index.html')
 
 def blog(request):
-    return HttpResponse('<h1>Your blog<h1/>')
+    return render(request, 'blog.html')
 
 def about(request):
-    return HttpResponse('<h1>About me<h1/>')
+    return render(request, 'about.html')
